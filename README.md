@@ -117,9 +117,31 @@ ___
 
 TIL - 0421
 * kotlin shortcut modifier
-
+    list type에 python 처럼 자동으로 integer 형식을 잡아줄 수 있음.
 ``` kotlin
 val numbers: List<Int> = listOf(1, 2, 3, 4, 5, 6)
 val numbers = listOf(1, 2, 3, 4, 5, 6)
 ```
 
+* mutableList 
+    길이를 지정해주지 않아도 계속 adding 가능함.
+``` kotlin
+val entrees = mutableListOf<String>()
+```
+
+* vararg modifier (첨 봤음..)
+    > In Kotlin, the vararg modifier allows you to pass a variable number of arguments of the same type into a function or constructor. In that way, you can supply the different vegetables as individual strings instead of a list.
+
+``` kotlin 
+class Vegetables(vararg val toppings: String) : Item("Vegetables", 5)
+```
+
+* 질문사항
+1. vararg 많이 쓰이는지..? 언뜻 보기엔 그냥 List<string>하면 되는거 아닌지?
+
+2. double dollar sgign의 의미는 먼지?
+
+3. 혹시 android studio에서 그냥 따로 kt 파일은 running 할 수 있는지?
+
+4. return this 는 어떻게 되는건지..?\
+    > Kotlin provides the keyword this to reference the current object instance. Within the addItem() and addAll() methods, you return the current Order by returning this.
