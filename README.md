@@ -143,5 +143,37 @@ class Vegetables(vararg val toppings: String) : Item("Vegetables", 5)
 
 3. 혹시 android studio에서 그냥 따로 kt 파일은 running 할 수 있는지?
 
-4. return this 는 어떻게 되는건지..?\
+4. return this 는 어떻게 되는건지..?
     > Kotlin provides the keyword this to reference the current object instance. Within the addItem() and addAll() methods, you return the current Order by returning this.
+
+    ___
+
+    TIL - 0426
+* 질문사항  
+    1. 에러문의
+    > public final val stringResourceId: Int defined in com.example.affirmations.model.Affirmation
+
+
+``` kotlin 
+
+    기존 코드
+    data class Affirmation(val stringResourceId: Int)
+    {
+    @StringRes val stringResourceId: Int,
+    @DrawableRes val imageResourceId: Int
+    }
+    
+    현재 코드
+    data class Affirmation(
+    @StringRes val stringResourceId: Int,
+    @DrawableRes val imageResourceId: Int
+    )
+
+```
+___
+
+##  TIL - 0429
+1. Intent? 뒤에 왜 ?가 붙는지. -> intent는 nullable한 값이라 보호하기 위해서
+ > To safely access this value, you put a ? after the name. If intent is null, your app won't even attempt to access the extras property, and if extras is null, your code won't even attempt to call getString().
+ 
+2. companion object..? 이건 왜 쓰는거지? 지역변수 느낌이긴 한데...
