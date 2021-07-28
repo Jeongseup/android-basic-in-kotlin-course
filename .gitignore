@@ -1,6 +1,7 @@
 ## kotlin Ignore file ##
-
-.idea*/
+/.github
+/.idea
+/.idea*/
 /.jpg
 *.jpg/
 *.iml
